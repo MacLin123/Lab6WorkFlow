@@ -4,7 +4,6 @@
 #include "tdatacom.h"
 #include "TTextLink.h"
 
-using namespace std;
 class TText;
 typedef TText* PTText;
 class TText : public TDataCom {

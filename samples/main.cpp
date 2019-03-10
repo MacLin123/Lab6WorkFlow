@@ -5,10 +5,11 @@
 //
 
 #include <iostream>
-
+#include "../include/TText.h"
 using namespace std;
 
 int main()
 {
+  PTTextLink f = new TTextLink("fff",NULL,NULL);
   return 0;
 }

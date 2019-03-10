@@ -1,10 +1,13 @@
 #pragma once
-#include <alloca.h>
+
 #include <string.h>
+#include <iostream>
 #include "tdatvalue.h"
 #include "ttexters.h"
+
 #define TextLineLength 20
 #define MemSize 20
+using namespace std;
 class TTextLink;
 class TText;
 typedef TTextLink *PTTextLink;

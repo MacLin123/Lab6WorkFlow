@@ -85,7 +85,7 @@ void TText::InsDownLine(string s) //insertion string to Down(SubLevel)
     else
     {
         PTTextLink pd = pCurrent->pDown;
-        PTTextLink pl = new TTextLink("", pd, NULL); // я думаю при инициализации можно передать s.c_str()!!!!!
+        PTTextLink pl = new TTextLink(NULL, pd, NULL); // я думаю при инициализации можно передать s.c_str()!!!!!
         strncpy(pl->Str, s.c_str(), TextLineLength);
         pl->Str[TextLineLength - 1] = '\0'; // set 0 if s.length > Str.length
         pCurrent->pDown = pl;
@@ -99,7 +99,7 @@ void TText::InsDownSection(string s) // insertion section to Down (SubLevel)
     else
     {
         PTTextLink pd = pCurrent->pDown;
-        PTTextLink pl = new TTextLink("", NULL, pd);
+        PTTextLink pl = new TTextLink(NULL, NULL, pd);
         strncpy(pl->Str, s.c_str(), TextLineLength);
         pl->Str[TextLineLength - 1] = '\0'; // set 0 if s.length > Str.length
         pCurrent->pDown = pl;
@@ -112,7 +112,7 @@ void TText::InsNextLine(string s) // insert string to cur level
         SetRetCode(TextError);
     else
     {
-        PTTextLink pl = new TTextLink("", pCurrent->pNext, NULL);
+        PTTextLink pl = new TTextLink(NULL, pCurrent->pNext, NULL);
         strncpy(pl->Str,s.c_str(),TextLineLength);
         pl->Str[TextLineLength - 1] = '\0';
         pCurrent->pNext = pl;
@@ -125,7 +125,7 @@ void TText::InsNextSection(string s)
         SetRetCode(TextError);
     else
     {
-        PTTextLink pl = new TTextLink("", NULL, pCurrent->pNext);
+        PTTextLink pl = new TTextLink(NULL, NULL, pCurrent->pNext);
         strncpy(pl->Str,s.c_str(),TextLineLength);
         pl->Str[TextLineLength - 1] = '\0';
         pCurrent->pNext = pl;

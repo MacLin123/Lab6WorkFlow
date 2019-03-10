@@ -1,6 +1,7 @@
-#include <iostream>
 #include "../include/TTextLink.h"
 #include "../include/TText.h"
+
+TTextMem TTextLink::MemHeader;
 
 void TTextLink::InitMemSystem(int size)
 {
