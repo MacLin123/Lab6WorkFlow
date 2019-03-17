@@ -10,6 +10,6 @@ using namespace std;
 
 int main()
 {
-  PTTextLink f = new TTextLink("fff",NULL,NULL);
+  PTTextLink f = new TTextLink(NULL,NULL,NULL);
   return 0;
 }
